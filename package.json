@@ -114,5 +114,10 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.5",
     "vitest": "^1.2.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@codspeed/vitest-plugin@3.0.0": "patches/@codspeed__vitest-plugin@3.0.0.patch"
+    }
   }
 }
