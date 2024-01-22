@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@codspeed/vitest-plugin@3.0.0':
-    hash: dx2fk7x7pejcreimcwav3df6wq
+    hash: easzxxmz6g2vvoumv4s3b5ciaa
     path: patches/@codspeed__vitest-plugin@3.0.0.patch
 
 importers:
@@ -21,7 +21,7 @@ importers:
         version: 7.23.6
       '@codspeed/vitest-plugin':
         specifier: ^3.0.0
-        version: 3.0.0(patch_hash=dx2fk7x7pejcreimcwav3df6wq)(vite@5.0.7)(vitest@1.2.1)
+        version: 3.0.0(patch_hash=easzxxmz6g2vvoumv4s3b5ciaa)(vite@5.0.7)(vitest@1.2.1)
       '@rollup/plugin-alias':
         specifier: ^5.0.1
         version: 5.0.1(rollup@4.4.1)
@@ -641,7 +641,7 @@ packages:
       - debug
     dev: true
 
-  /@codspeed/vitest-plugin@3.0.0(patch_hash=dx2fk7x7pejcreimcwav3df6wq)(vite@5.0.7)(vitest@1.2.1):
+  /@codspeed/vitest-plugin@3.0.0(patch_hash=easzxxmz6g2vvoumv4s3b5ciaa)(vite@5.0.7)(vitest@1.2.1):
     resolution: {integrity: sha512-4En9dU8i/FI0JKWV3IoAPEbOLtdQhlYQK/mEUW0HU06mj6khsVnA7/YUcbU1brMDz06G1F9eEXjQ3fjvYI3FwQ==}
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0

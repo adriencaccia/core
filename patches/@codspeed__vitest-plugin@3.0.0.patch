@@ -7,7 +7,7 @@ index d0bda2e2a9731ac36bd44758123be3c0d3604d6f..7a261badc48836faaaa2320e0b48073f
            poolOptions: {
              forks: {
 -              execArgv: getV8Flags()
-+              execArgv: [...getV8Flags(), "--jitless"]
++              execArgv: [...getV8Flags(), "--no-sparkplug"]
              }
            },
            runner: getCodSpeedFileFromName("runner"),
