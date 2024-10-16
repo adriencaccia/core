@@ -61,7 +61,7 @@
   "devDependencies": {
     "@babel/parser": "^7.23.6",
     "@babel/types": "^7.23.6",
-    "@codspeed/vitest-plugin": "^3.0.0",
+    "@codspeed/vitest-plugin": "^3.1.1",
     "@rollup/plugin-alias": "^5.0.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.0.1",
@@ -113,11 +113,11 @@
     "tsx": "^4.7.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.5",
-    "vitest": "^1.2.1"
+    "vitest": "^2.1.3"
   },
   "pnpm": {
     "patchedDependencies": {
-      "@codspeed/vitest-plugin@3.0.0": "patches/@codspeed__vitest-plugin@3.0.0.patch"
+      "@codspeed/vitest-plugin@3.1.1": "patches/@codspeed__vitest-plugin@3.1.1.patch"
     }
   }
 }
