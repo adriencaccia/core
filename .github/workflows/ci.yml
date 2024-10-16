@@ -36,3 +36,5 @@ jobs:
         with:
           run: pnpm vitest bench --run
           token: ${{ secrets.CODSPEED_TOKEN }}
+        env:
+          CODSPEED_FORCE_OPTIMIZATION: true
