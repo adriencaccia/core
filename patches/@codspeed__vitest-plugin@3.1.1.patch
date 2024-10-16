@@ -1,8 +1,8 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 4d4e696f5b681bd7256ce0a7e0b02c4ddef0ae11..f58e5907e5e17b4a63f6059bcbfb9d19a881950e 100644
+index 4d4e696f5b681bd7256ce0a7e0b02c4ddef0ae11..7449856b6fb3e18ad7bbd810f3a3aa706e523abd 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
-@@ -26,7 +26,11 @@ function codspeedPlugin() {
+@@ -26,7 +26,12 @@ function codspeedPlugin() {
            pool: "forks",
            poolOptions: {
              forks: {
@@ -11,6 +11,7 @@ index 4d4e696f5b681bd7256ce0a7e0b02c4ddef0ae11..f58e5907e5e17b4a63f6059bcbfb9d19
 +                ...getV8Flags(),
 +                '--no-concurrent-sweeping',
 +                '--max-old-space-size=4096',
++                '--jitless',
 +              ]
              }
            },
