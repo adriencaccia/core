@@ -1,0 +1,31 @@
+diff --git a/dist/runner.mjs b/dist/runner.mjs
+index f4c6c95e8e65391c140168e81ff553a199a395f2..f265659655c58302305e4992e32479030848c41f 100644
+--- a/dist/runner.mjs
++++ b/dist/runner.mjs
+@@ -5,15 +5,15 @@ import { NodeBenchmarkRunner } from 'vitest/runners';
+ import { getHooks, getBenchFn } from 'vitest/suite';
+ 
+ function getSuiteHooks(suite, name) {
+-  return getHooks(suite)[name];
++  return getHooks(suite)?.[name] ?? [];
+ }
+ async function callSuiteHook(suite, currentTask, name) {
+-  if (name === "beforeEach" && suite.suite) {
++  if (name === "beforeEach" && suite?.suite) {
+     await callSuiteHook(suite.suite, currentTask, name);
+   }
+   const hooks = getSuiteHooks(suite, name);
+   await Promise.all(hooks.map((fn) => fn()));
+-  if (name === "afterEach" && suite.suite) {
++  if (name === "afterEach" && suite?.suite) {
+     await callSuiteHook(suite.suite, currentTask, name);
+   }
+ }
+@@ -32,6 +32,7 @@ async function runBench(benchmark, currentSuiteName) {
+       throw e;
+     }
+   }
++  global.gc();
+   await callSuiteHook(benchmark.suite, benchmark, "afterEach");
+   await callSuiteHook(benchmark.suite, benchmark, "beforeEach");
+   await mongoMeasurement.start(uri);
