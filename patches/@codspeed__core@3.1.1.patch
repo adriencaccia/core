@@ -1,5 +1,5 @@
 diff --git a/dist/index.cjs.js b/dist/index.cjs.js
-index 50875847ebdf75c1a7b8fce929f526fa424487ae..65edfe19115b9724239a1a1176f7ab86e9c570f2 100644
+index 50875847ebdf75c1a7b8fce929f526fa424487ae..a1dadd8cc16c729b87472f8a8bbeae137046abf9 100644
 --- a/dist/index.cjs.js
 +++ b/dist/index.cjs.js
 @@ -26,7 +26,11 @@ const getV8Flags = () => {
@@ -9,7 +9,7 @@ index 50875847ebdf75c1a7b8fce929f526fa424487ae..65edfe19115b9724239a1a1176f7ab86
 -    "--interpreted-frames-native-stack"
 +    "--expose-gc",
 +    "--interpreted-frames-native-stack",
-+    // "--jitless",
++    "--jitless",
 +    '--no-concurrent-sweeping',
 +    '--max-old-space-size=4096',
    ];

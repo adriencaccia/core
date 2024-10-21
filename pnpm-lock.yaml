@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@codspeed/core@3.1.1':
-    hash: kiqqkmvp2d2tf4irahnakhymzi
+    hash: gboplmnlvlpv3or4j6sr3emaju
     path: patches/@codspeed__core@3.1.1.patch
   '@codspeed/vitest-plugin@3.1.1':
     hash: cewuui3rhlkzcqmhvr4gydsouu
@@ -633,7 +633,7 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@codspeed/core@3.1.1(patch_hash=kiqqkmvp2d2tf4irahnakhymzi):
+  /@codspeed/core@3.1.1(patch_hash=gboplmnlvlpv3or4j6sr3emaju):
     resolution: {integrity: sha512-ONhERVDAtkm0nc+FYPivDozoMOlNUP2BWRBFDJYATGA18Iap5Kd2mZ1/Lwz54RB5+g+3YDOpsvotHa4hd3Q+7Q==}
     dependencies:
       axios: 1.6.5
@@ -651,7 +651,7 @@ packages:
       vite: ^4.2.0 || ^5.0.0
       vitest: '>=1.2.2'
     dependencies:
-      '@codspeed/core': 3.1.1(patch_hash=kiqqkmvp2d2tf4irahnakhymzi)
+      '@codspeed/core': 3.1.1(patch_hash=gboplmnlvlpv3or4j6sr3emaju)
       vite: 5.0.7(@types/node@20.11.1)(terser@5.22.0)
       vitest: 2.1.3(@types/node@20.11.1)(jsdom@23.2.0)(terser@5.22.0)
     transitivePeerDependencies:
