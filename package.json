@@ -117,7 +117,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@codspeed/vitest-plugin@3.1.1": "patches/@codspeed__vitest-plugin@3.1.1.patch"
+      "@codspeed/vitest-plugin@3.1.1": "patches/@codspeed__vitest-plugin@3.1.1.patch",
+      "@codspeed/core@3.1.1": "patches/@codspeed__core@3.1.1.patch"
     }
   }
 }

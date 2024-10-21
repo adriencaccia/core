@@ -1,0 +1,82 @@
+diff --git a/dist/index.cjs.js b/dist/index.cjs.js
+index 50875847ebdf75c1a7b8fce929f526fa424487ae..65edfe19115b9724239a1a1176f7ab86e9c570f2 100644
+--- a/dist/index.cjs.js
++++ b/dist/index.cjs.js
+@@ -26,7 +26,11 @@ const getV8Flags = () => {
+     "--no-opt",
+     "--predictable",
+     "--predictable-gc-schedule",
+-    "--interpreted-frames-native-stack"
++    "--expose-gc",
++    "--interpreted-frames-native-stack",
++    // "--jitless",
++    '--no-concurrent-sweeping',
++    '--max-old-space-size=4096',
+   ];
+   if (nodeVersionMajor < 18) {
+     flags.push("--no-randomize-hashes");
+@@ -12113,7 +12117,7 @@ var mimeDb = require$$0;
+ 	      types[extension] = type;
+ 	    }
+ 	  });
+-	} 
++	}
+ } (mimeTypes));
+ 
+ var defer_1 = defer$1;
+@@ -13312,7 +13316,7 @@ function buildURL(url, params, options) {
+   if (!params) {
+     return url;
+   }
+-  
++
+   const _encode = options && options.encode || encode;
+ 
+   const serializeFn = options && options.serialize;
+@@ -15120,7 +15124,7 @@ function requireNode () {
+ 		formatters.O = function (v) {
+ 			this.inspectOpts.colors = this.useColors;
+ 			return util.inspect(v, this.inspectOpts);
+-		}; 
++		};
+ 	} (node, node.exports));
+ 	return node.exports;
+ }
+@@ -15401,7 +15405,7 @@ function requireBrowser () {
+ 			} catch (error) {
+ 				return '[UnexpectedJSONParseError]: ' + error.message;
+ 			}
+-		}; 
++		};
+ 	} (browser, browser.exports));
+ 	return browser.exports;
+ }
+@@ -16518,7 +16522,7 @@ class ZlibHeaderTransformStream extends stream.Transform {
+       if (chunk[0] !== 120) { // Hex: 78
+         const header = Buffer.alloc(2);
+         header[0] = 120; // Hex: 78
+-        header[1] = 156; // Hex: 9C 
++        header[1] = 156; // Hex: 9C
+         this.push(header, encoding);
+       }
+     }
+@@ -18861,6 +18865,9 @@ const optimizeFunction = async (fn) => {
+   }
+   await fn();
+   await fn();
++  await fn();
++  await fn();
++  await fn();
+   eval("%OptimizeFunctionOnNextCall(fn)");
+   await fn();
+ };
+@@ -18871,6 +18878,9 @@ const optimizeFunctionSync = (fn) => {
+   }
+   fn();
+   fn();
++  fn();
++  fn();
++  fn();
+   eval("%OptimizeFunctionOnNextCall(fn)");
+   fn();
+ };
