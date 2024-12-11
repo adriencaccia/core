@@ -113,12 +113,11 @@
     "tsx": "^4.7.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.5",
-    "vitest": "^2.1.3"
+    "vitest": "^2.1.8"
   },
   "pnpm": {
     "patchedDependencies": {
-      "@codspeed/vitest-plugin@3.1.1": "patches/@codspeed__vitest-plugin@3.1.1.patch",
-      "@codspeed/core@3.1.1": "patches/@codspeed__core@3.1.1.patch"
+      "@codspeed/vitest-plugin@3.1.1": "patches/@codspeed__vitest-plugin@3.1.1.patch"
     }
   }
 }
