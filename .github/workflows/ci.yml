@@ -1,11 +1,7 @@
 name: 'ci'
 on:
   push:
-    branches:
-      - '**'
   pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -31,10 +27,17 @@ jobs:
 
       - run: pnpm install
 
+      - name: Install codspeed-node from Git
+        run: |
+          pnpm remove @codspeed/vitest-plugin
+          ./setup-codspeed-node.sh feat/new-optimizations
+
       - name: Run benchmarks
         uses: CodSpeedHQ/action@v3
         with:
-          run: pnpm vitest bench --run
+          run: |
+            pnpm vitest bench --run reactivity
+            pnpm vitest bench --run runtime-core
           token: ${{ secrets.CODSPEED_TOKEN }}
         env:
           CODSPEED_FORCE_OPTIMIZATION: true
